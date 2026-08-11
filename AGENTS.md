@@ -1,16 +1,46 @@
-# AGENTS.md
 
-## Project Context
+---
 
-This is a BreastGuard AI repository. Treat it as user-owned application code, keep changes focused on the user's request, and preserve existing project conventions.
+# 2. `AGENTS.md`
 
-## Key Files
+```md
+# BreastGuard AI - Development Guidelines
 
-- `src/`: frontend application source.
-- `vite.config.js`: Vite config setup.
-- `.env`: local-only environment values; never commit secrets.
+## Project Overview
 
-## Working Notes
+BreastGuard AI is an educational Deep Learning web application for breast
+cancer prediction using a trained Artificial Neural Network.
 
-- Use `npm run dev` to start the frontend.
-- Run the relevant checks from `package.json` before finishing code changes.
+The project consists of:
+
+- React + Vite frontend
+- Firebase application services
+- FastAPI backend
+- TensorFlow/Keras ANN model
+- Gemini AI Assistant
+
+---
+
+## Core Architecture
+
+```text
+React Frontend
+      |
+      | Prediction Request
+      v
+FastAPI Backend
+      |
+      +--> StandardScaler
+      |
+      +--> ANN Model
+      |
+      +--> Prediction
+      |
+      v
+React Result
+      |
+      v
+Firebase Firestore
+      |
+      +--> History
+      +--> Analytics
