@@ -1,0 +1,7 @@
+Match: .\.gitignore
+Match: .\AGENTS.md
+Match: .\index.html
+Match: .\package.json
+Match: .\README.md
+Match: .\vite.config.js
+Match: .\backend\README.md
